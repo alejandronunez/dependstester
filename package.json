@@ -1,5 +1,5 @@
 {
-  "name": "dependstester",
+  "name": "alejandronunez/dependstester",
   "main": "http://localhost:8888/",
   "node-main": "index.js",
   "window": {
