@@ -13,6 +13,9 @@
     "min_width": 900,
     "min_height": 600
   },
+  "dependencies": {
+    "sqlite3":"3.0.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alejandronunez/dependstester.git"
