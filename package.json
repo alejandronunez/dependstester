@@ -1,5 +1,5 @@
 {
-  "name": "node-webkit-sqlite3-windows-demo",
+  "name": "dependstester",
   "main": "http://localhost:8888/",
   "node-main": "index.js",
   "window": {
