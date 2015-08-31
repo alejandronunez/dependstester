@@ -1,5 +1,5 @@
 {
-  "name": "alejandronunez/dependstester",
+  "name": "dependstester",
   "main": "http://localhost:8888/",
   "node-main": "index.js",
   "window": {
@@ -12,6 +12,10 @@
     "frame": true,
     "min_width": 900,
     "min_height": 600
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alejandronunez/dependstester.git"
   },
   "nodejs": true
 }
