@@ -33,8 +33,7 @@ on_success:
   - git config --global user.name "alejandronunez"
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git add lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
-  - git commit -a
+  - git commit lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
   - git push --all https://github.com/alejandronunez/dependstester.git
 
 build: OFF
