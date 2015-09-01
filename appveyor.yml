@@ -25,9 +25,9 @@ install:
   - npm install nw-gyp -g
   - npm install --build-from-source --runtime=node-webkit --target_arch=ia32 --target=%nwjs%
 
-artifacts:
-  - path: '**\*.node'
-    name: sqlitebuild
+#artifacts:
+#  - path: '**\*.node'
+#    name: sqlitebuild
 
 on_success:
 #  - git config --global user.email "cwpro.pg@gmail.com"
@@ -44,10 +44,11 @@ build: OFF
 test: OFF
 
 deploy:
-
-- provider: GitHub
-  tag: dependtesev-01
-  auth_token:
-    secure: jbwe6kvA2dFajNuhaN6igxsrzc74PLZF67j8yARmKt8L8+mHqcTy5TA5xLhSEFI/
-  artifact: sqlitebuild
-  draft: true
+  provider: FTP
+  protocol: ftps
+  host: cubanwebprofessionals.com
+  username: cubanweb
+  password:
+    secure: DELRq8m@wY
+  folder: build
+  artifact: /.*\.node/
