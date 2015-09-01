@@ -35,7 +35,7 @@ on_success:
   - git add lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
   - git commit -m "automatic"
   - git remote -v
-  - git config remote.origin.url https://alejandronunez:58a9cd2232c05da94b829f4a139d4d99e662be65@github.com/alejandronunez/dependstester.git
+  - git config remote.origin.url https://alejandronunez:Ale880514@github.com/alejandronunez/dependstester.git
   - git remote -v
   - git push origin master
 
