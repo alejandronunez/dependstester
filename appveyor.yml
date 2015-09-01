@@ -27,6 +27,7 @@ install:
 
 artifacts:
   - path: '**\*.node'
+    name: sqlitebuild
 
 on_success:
   - git config --global user.email "cwpro.pg@gmail.com"
@@ -41,4 +42,14 @@ on_success:
 
 build: OFF
 test: OFF
-deploy: OFF
+
+deploy:
+
+- provider: GitHub
+  tag: dependtesev-01
+  release: dependtesev-01
+  auth_token:
+    secure: jbwe6kvA2dFajNuhaN6igxsrzc74PLZF67j8yARmKt8L8+mHqcTy5TA5xLhSEFI/
+  artifact: sqlitebuild
+  draft: true
+  prerelease: true
