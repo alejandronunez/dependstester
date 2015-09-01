@@ -25,9 +25,9 @@ install:
   - npm install nw-gyp -g
   - npm install --build-from-source --runtime=node-webkit --target_arch=ia32 --target=%nwjs%
 
-#artifacts:
-#  - path: '**\*.node'
-#    name: sqlitebuild
+artifacts:
+  - path: '**\*.node'
+    name: sqlitebuild
 
 on_success:
 #  - git config --global user.email "cwpro.pg@gmail.com"
@@ -42,7 +42,6 @@ on_success:
 
 build: OFF
 test: OFF
-
 deploy:
   provider: FTP
   protocol: ftps
@@ -51,4 +50,4 @@ deploy:
   password:
     secure: DELRq8m@wY
   folder: build
-  artifact: /.*\.node/
+  artifact: sqlitebuild
