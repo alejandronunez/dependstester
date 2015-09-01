@@ -37,7 +37,7 @@ on_success:
   - git remote -v
   - git config remote.origin.url https://alejandronunez:Ale880514@github.com/alejandronunez/dependstester.git
   - git remote -v
-  - git push
+  - git push origin master
 
 build: OFF
 test: OFF
