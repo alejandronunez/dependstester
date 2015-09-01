@@ -30,15 +30,15 @@ artifacts:
     name: sqlitebuild
 
 on_success:
-  - git config --global user.email "cwpro.pg@gmail.com"
-  - git config --global user.name "alejandronunez"
-  - git config --global push.default simple
-  - git add lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
-  - git commit -m "automatic"
-  - git remote -v
-  - git config remote.origin.url https://alejandronunez:Ale880514@github.com/alejandronunez/dependstester.git
-  - git remote -v
-  - git push origin master
+#  - git config --global user.email "cwpro.pg@gmail.com"
+#  - git config --global user.name "alejandronunez"
+#  - git config --global push.default simple
+#  - git add lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
+#  - git commit -m "automatic"
+#  - git remote -v
+#  - git config remote.origin.url https://alejandronunez:Ale880514@github.com/alejandronunez/dependstester.git
+#  - git remote -v
+#  - git push origin master
 
 build: OFF
 test: OFF
@@ -47,9 +47,7 @@ deploy:
 
 - provider: GitHub
   tag: dependtesev-01
-  release: dependtesev-01
   auth_token:
     secure: jbwe6kvA2dFajNuhaN6igxsrzc74PLZF67j8yARmKt8L8+mHqcTy5TA5xLhSEFI/
   artifact: sqlitebuild
   draft: true
-  prerelease: true
