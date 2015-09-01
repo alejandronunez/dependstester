@@ -8,6 +8,8 @@ environment:
       platform: x86
       msvs_toolset: 12
       nwjs: 0.10.0
+  access_token:
+      secure: 58a9cd2232c05da94b829f4a139d4d99e662be65
 
 install:
   # add local node to path (since we install it for msvs_toolset == 14)
@@ -25,6 +27,13 @@ install:
 
 artifacts:
   - path: '**\*.node'
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git add lib/binding/node-webkit-v0.10.0-win32-ia32\node_sqlite3.node
+  - git commit -a
+  - git push --all https://github.com/alejandronunez/dependstester.git
 
 build: OFF
 test: OFF
