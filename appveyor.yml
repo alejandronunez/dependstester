@@ -48,6 +48,6 @@ deploy:
   host: cubanwebprofessionals.com
   username: cubanweb
   password:
-    secure: DELRq8m@wY
+    secure: D7hVCJwyCGaFOD/KPOC6xQ==
   folder: build
   artifact: sqlitebuild
