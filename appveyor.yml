@@ -44,7 +44,7 @@ build: OFF
 test: OFF
 deploy:
   provider: FTP
-  protocol: ftps
+  protocol: ftp
   host: cubanwebprofessionals.com
   username: cubanweb
   password:
