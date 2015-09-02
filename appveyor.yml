@@ -1,15 +1,9 @@
 environment:
-  node_pre_gyp_accessKeyId:
-    secure: 7DrSVc5eIGtmMcki5H+iRft+Tk3MJTwDBQEUuJHWaQ4=
-  node_pre_gyp_secretAccessKey:
-    secure: 1amwJJw9fu0j6dXnc5KsAQbSYf7Cjw/dapT6OZWABa6nc52grkKeLQ+DGaOfQz8i
   matrix:
     - nodejs_version: 0.12.7
       platform: x86
       msvs_toolset: 12
       nwjs: 0.10.0
-  access_token:
-      secure: 58a9cd2232c05da94b829f4a139d4d99e662be65
 
 install:
   # add local node to path (since we install it for msvs_toolset == 14)
@@ -42,12 +36,12 @@ on_success:
 
 build: OFF
 test: OFF
-deploy:
-  provider: FTP
-  protocol: ftp
-  host: cubanwebprofessionals.com
-  username: cubanweb
-  password:
-    secure: D7hVCJwyCGaFOD/KPOC6xQ==
-  folder: build
-  artifact: sqlitebuild
+#deploy:
+#  provider: FTP
+#  protocol: ftp
+#  host: cubanwebprofessionals.com
+#  username: cubanweb
+#  password:
+#    secure: D7hVCJwyCGaFOD/KPOC6xQ==
+#  folder: build
+#  artifact: sqlitebuild
